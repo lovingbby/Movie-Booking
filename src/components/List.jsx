@@ -1,11 +1,10 @@
-function List(){
+function List({index}){
 
 
-    return
-    (
-    <div>
-Hello Yuvashree Soundhara Pandiyan
-    </div>
+    return(
+        <div>
+            <h3>Season {index}</h3>
+        </div>
     );
 }
 

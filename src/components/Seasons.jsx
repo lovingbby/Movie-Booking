@@ -1,17 +1,12 @@
  import List from './List'
+ import '../styles/List.css'
 
 function Seasons({seasonCount}){
 
-const row=[];
-
-// for(let i=0 ; i< seasonCount; i++){
-//     row.push(<List key={i+1}/>);
-// }
-
     return(
-        <div>
+        <div className='seasonFlex'>
         {
-            Array.from({length: seasonCount > 0 ? seasonCount: 1 } , (_,i) => <List key={i+1}/>)
+            Array.from({length: seasonCount} , (_,i) => <List key={i+1} index={i+1}/>)
         }
         </div>
     );

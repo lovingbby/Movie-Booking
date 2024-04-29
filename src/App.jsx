@@ -9,13 +9,14 @@ function App() {
   const [seasonCount,setSeasonCount] = useState(0);
 
 function handleCount(val){
-  setSeasonCount(val);
+  setSeasonCount( val);
+  console.log(seasonCount)
 }
 
   return (
     <div>
       <Header/>
-      <MovieList setSeasonCount={handleCount}/>
+      <MovieList handleCount={handleCount}/>
       <Seasons seasonCount={seasonCount}/>
     </div>
   );

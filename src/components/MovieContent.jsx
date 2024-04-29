@@ -1,13 +1,24 @@
+import { useEffect } from "react";
 
 
-function MovieContent({movieOne}){
 
-    const { Title, Actors, Awards,Poster,
-        totalSeasons,Language,Ratings,Country,Writer,Plot
+function MovieContent({movieOne,handleCount}){
+
+    const { Title, Actors, Awards,
+        totalSeasons,Language,Country,Writer,Plot
        } = movieOne;
+
+useEffect(() => {
+    setValue();   
+},[setValue]);
+
+function setValue(){
+    handleCount(totalSeasons);
+    }
 
     return(
         <div>
+        
             <h1>{Title}</h1>
      <p>{Plot}</p>
     <p>Writer: {Writer}</p>
